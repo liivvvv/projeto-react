@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Listagem from './pages/Listagem';
+import Cadastro from './pages/Cadastro';
+import Edicao from './pages/Edicao';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <nav className="main-nav">
+        <Link to="/">Gerenciador de tarefas</Link>
+        <Link to="/cadastro" className="btn-new">nova tarefa +</Link>
+      </nav>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Listagem />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/editar/:id" element={<Edicao />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

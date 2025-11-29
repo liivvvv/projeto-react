@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+body {
+    background-color: #f0f2f5; /* um fundo quase branco para destacar a paleta */
+    color: #333;
+    font-family: sans-serif;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-nav {
+    background-color: #b8aeb8; /* cor 3 - mauve */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-nav .btn-new {
+    background-color: #99cccc; /* cor 1 - teal */
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px; /* removido padding de cima e de baixo */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+    color: #c79ead; /* cor 4 - rosa */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+th {
+    background-color: #a8bdc2; /* cor 2 - azul acinzentado */
+    color: white;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete, button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-edit {
+    background-color: #d78fa3; /* cor 5 - rosa mais vivo */
+    color: white;
+}
+
+.btn-delete {
+    background-color: #888; /* um cinza neutro para exclusão */
+    color: white;
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-container input, .form-container textarea, .form-container select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.form-container button {
+    margin-top: 20px;
+    background-color: #99cccc; /* cor 1 - teal */
+    color: #333;
 }
